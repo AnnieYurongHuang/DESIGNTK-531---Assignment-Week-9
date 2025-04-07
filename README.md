@@ -5,6 +5,21 @@ This README.md demonstrates how to control a stepper motor using a Raspberry Pi 
 1. An MQTT publisher that sends temperature data.
 2. An MQTT subscriber that listens to this data and controls a stepper motor connected to a Crickit Hat when the temperature exceeds a threshold.
 
+## How It Works
+
+### Publisher
+The `motorpub.py` script generates random temperature data and sends it over MQTT. It continually publishes this data to the topic `"pythontest/sensors/mysensor"`, which includes temperature values along with humidity and timestamp information.
+
+### Subscriber
+The `run_stepper.py` script listens for MQTT messages on the specified topic. When it receives a message, it decodes the data and extracts the temperature value. If the temperature exceeds 24 degrees Celsius, the script activates the stepper motor. The motor control logic triggers the stepper motor to make one full rotation forward and then backward, demonstrating how IoT devices can respond to data in real-time.
+
+### Messaging Logic to Motor Control Connection
+The core of this project lies in the integration of MQTT messaging with physical device control:
+
+- **MQTT Messaging**: Provides a lightweight method of carrying data (temperature readings in this case) using a publish-subscribe model. This is ideal for IoT applications like this where data needs to be transferred from one point (the publisher) to others (subscribers) over a network.
+
+- **Motor Control**: Upon receiving the correct conditions (temperature > 24°C), the subscriber script engages the motor's hardware control through the Crickit Hat's motor driver libraries. This direct control of hardware based on data received over MQTT showcases a practical IoT application.
+
 ## Hardware Requirements
 - Raspberry Pi (tested on Raspberry Pi 4)
 - Adafruit Crickit Hat
@@ -42,10 +57,3 @@ This README.md demonstrates how to control a stepper motor using a Raspberry Pi 
 2. **Install the Python extension** for Visual Studio Code.
 3. **Connect to your Raspberry Pi** via SSH or directly use the terminal in VSC if you are coding on the Raspberry Pi.
 
-## Running the Scripts
-- **motorpub.py**: This script simulates temperature data and publishes it to the MQTT topic. Run this script to start sending temperature data.
-- **run_stepper.py**: This script subscribes to the MQTT topic, listens for temperature data, and controls the motor based on the temperature.
-
-## How It Works
-- **Publisher**: The `motorpub.py` script generates random temperature data and sends it over MQTT.
-- **Subscriber**: The `run_stepper.py` script listens for MQTT messages on the specified topic. If the temperature in the received message exceeds 24 degrees Celsius, the script activates the stepper motor to make one full rotation forward and then backward.
