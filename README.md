@@ -34,6 +34,7 @@ The core of this project lies in the integration of MQTT messaging with physical
 - Adafruit libraries for motor control
 
 ## Setup Instructions
+- Ensure that you have your virtual env set up in both Raspbery Pi and your termainal. 
 
 ### Setting Up the Raspberry Pi
 1. **Install the Raspbian OS**: Download and install the Raspberry Pi OS onto your Raspberry Pi.
@@ -42,11 +43,14 @@ The core of this project lies in the integration of MQTT messaging with physical
 
 ### Installing Required Software
 1. **Install Mosquitto MQTT Broker**:
-   ```bash
    sudo apt update
    sudo apt install -y mosquitto mosquitto-clients
    sudo systemctl enable mosquitto
    sudo systemctl start mosquitto
+
+2. **Install on Pi**:
+pip install adafruit-circuitpython-motor 
+pip install adafruit-circuitpython-crickit
 
 ## Hardware Connections
 - **Connect the Stepper Motor to the Crickit Hat** according to the Crickit Hat documentation.
