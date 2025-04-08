@@ -5,3 +5,4 @@
 | SHT30 Temperature And Humidity Sensor - Wired Enclosed Shell        | $8.95          | [Link](https://www.adafruit.com/product/5064)             |
 | Adafruit STEMMA Soil Sensor - I2C Capacitive Moisture Sensor - JST PH 2mm | $7.50      | [Link](https://www.adafruit.com/product/4026)             |
 | 3.5 Inch Touchscreen Monitor, 480x320 LCD TFT SPI Display Compatible with Raspberry Pi 5/4B/3B/2B/A/B (Not Support HDMI) | $17.99 | [Link](https://www.amazon.com/iPistBit-Inch-Raspberry-Screen-480x320/dp/B0CJQVKXS8/ref=asc_df_B0D2NHKVZL?mcid=d8f323049c523f80ad5f357a4c63fc29&tag=hyprod-20&linkCode=df0&hvadid=704452679955&hvpos=&hvnetw=g&hvrand=1642705166839001634&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9189969&hvtargid=pla-2326179051269&th=1) | 
+|Adafruit Mini PiTFT 1.3" - 240x240 TFT Add-on for Raspberry Pi | $14.95 | [Link] (https://www.adafruit.com/product/4484)|
